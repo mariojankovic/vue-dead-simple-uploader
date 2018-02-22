@@ -1,0 +1,39 @@
+{
+  "name": "vue-dsu",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "A simple vue upload component with HTML only drag and drop features",
+  "repository": {
+    "url": "git+https://github.com/mariojankovic/vue-dead-simple-uploader.git",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "yarn bili index.js --plugin vue",
+    "dev": "npx poi"
+  },
+  "poi": {
+    "entry": "component/index.js",
+    "homepage": "./"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "bili": "^2.2.7",
+    "poi": "^9.6.13",
+    "rollup-plugin-vue": "^3.0.0",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "vue-axios": "^2.0.2"
+  },
+  "bugs": {
+    "url": "https://github.com/mariojankovic/vue-dead-simple-uploader/issues"
+  },
+  "homepage": "https://github.com/mariojankovic/vue-dead-simple-uploader#readme",
+  "keywords": [
+    "vue",
+    "uploader",
+    "image",
+    "simple"
+  ]
+}
