@@ -158,6 +158,7 @@ export default {
   position: relative;
   padding-bottom: 50%;
   background: #DDD;
+  overflow: hidden;
 }
 
 .uploader__input-wrapper:before {
@@ -203,7 +204,7 @@ export default {
   color: #333;
   cursor: pointer;
   height: 60px;
-  padding: calc(25% - 20px);
+  padding: calc(25% - 30px);
 }
 
 .uploader__input-upload-area svg {
