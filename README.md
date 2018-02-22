@@ -1,8 +1,8 @@
-# vue-dead-simple-uploader
+# Vue dead simple uploader ☝️
 
 [![NPM version](https://img.shields.io/npm/v/vue-dead-simple-uploader.svg?style=flat)](https://npmjs.com/package/vue-dead-simple-uploader) [![NPM downloads](https://img.shields.io/npm/dm/vue-dead-simple-uploader.svg?style=flat)](https://npmjs.com/package/vue-dead-simple-uploader)
 
-A simple vue upload component with HTML only drag and drop features
+A simple vue upload component with HTML only drag and drop features. It has image preview functionality and uses axios to push your image to whatever endpoint you specify.
 
 ## Install
 
