@@ -7,7 +7,7 @@ A simple vue upload component with HTML only drag and drop features. It has imag
 ## Install
 
 ```bash
-yarn add vue-dead-simple-uploader
+yarn add vue-dsu
 ```
 
 CDN: [UNPKG](https://unpkg.com/vue-dead-simple-uploader/) | [jsDelivr](https://cdn.jsdelivr.net/npm/vue-dead-simple-uploader/) (available as `window.VueSimpleUploader`)
