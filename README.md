@@ -8,6 +8,8 @@ A simple vue upload component with HTML only drag and drop features. It has imag
 
 ```bash
 yarn add vue-dsu
+# or
+npm install vue-dsu --save
 ```
 
 CDN: [UNPKG](https://unpkg.com/vue-dsu/) | [jsDelivr](https://cdn.jsdelivr.net/npm/vue-dsu/) (available as `window.VueSimpleUploader`)
@@ -45,6 +47,19 @@ data () {
   }
 }
 </script>
+```
+
+## ContriBOOT 👢
+- `yarn dev`: Run the dev environment
+- `yarn build`: Build for npm
+
+### Getting started
+```bash
+# Fork the repo
+git clone git@github.com:$YOUR_NAME/vue-dead-simple-uploader.git && cd vue-dead-simple-uploader
+
+yarn dev
+yarn build
 ```
 
 ## License
