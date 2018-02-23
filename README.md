@@ -1,6 +1,6 @@
 # Vue dead simple uploader ☝️
 
-[![NPM version](https://img.shields.io/npm/v/vue-dead-simple-uploader.svg?style=flat)](https://npmjs.com/package/vue-dead-simple-uploader) [![NPM downloads](https://img.shields.io/npm/dm/vue-dead-simple-uploader.svg?style=flat)](https://npmjs.com/package/vue-dead-simple-uploader)
+[![NPM version](https://img.shields.io/npm/v/vue-dsu.svg?style=flat)](https://npmjs.com/package/vue-dsu) [![NPM downloads](https://img.shields.io/npm/dm/vue-dsu.svg?style=flat)](https://npmjs.com/package/vue-dsu)
 
 A simple vue upload component with HTML only drag and drop features. It has image preview functionality and uses axios to push your image to whatever endpoint you specify.
 
@@ -10,7 +10,7 @@ A simple vue upload component with HTML only drag and drop features. It has imag
 yarn add vue-dsu
 ```
 
-CDN: [UNPKG](https://unpkg.com/vue-dead-simple-uploader/) | [jsDelivr](https://cdn.jsdelivr.net/npm/vue-dead-simple-uploader/) (available as `window.VueSimpleUploader`)
+CDN: [UNPKG](https://unpkg.com/vue-dsu/) | [jsDelivr](https://cdn.jsdelivr.net/npm/vue-dsu/) (available as `window.VueSimpleUploader`)
 
 ## Installation
 ```javascript
