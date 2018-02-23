@@ -97,7 +97,7 @@ export default {
     uploadImage() {
       // Upload image if data exists, then update item
       let formData = new FormData()
-      formData.append(this.apiURL, this.imageFile)
+      formData.append('file', this.imageFile)
       this.loading = true
       this.$http.post(this.apiURL, formData).then(response => {
         this.imageInput = response.data.url
