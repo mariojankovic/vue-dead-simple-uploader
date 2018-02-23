@@ -16,14 +16,14 @@
         </template>
 
         <template v-else>
-          <input :required="required === true" :id="`image-upload-${id}`" type="file" @change="previewImage" :accept="accept" class="vue-dsu__input-field">
-          <label class="vue-dsu__input-upload-area" :for="`image-upload-${id}`">
+          <input :required="required === true" :id="`image-upload-${dsuID}`" type="file" @change="previewImage" :accept="accept" class="vue-dsu__input-field">
+          <label class="vue-dsu__input-upload-area" :for="`image-upload-${dsuID}`">
             <svg class="svg-icon" viewBox="0 0 20 20">
 							<path d="M4.317,16.411c-1.423-1.423-1.423-3.737,0-5.16l8.075-7.984c0.994-0.996,2.613-0.996,3.611,0.001C17,4.264,17,5.884,16.004,6.88l-8.075,7.984c-0.568,0.568-1.493,0.569-2.063-0.001c-0.569-0.569-0.569-1.495,0-2.064L9.93,8.828c0.145-0.141,0.376-0.139,0.517,0.005c0.141,0.144,0.139,0.375-0.006,0.516l-4.062,3.968c-0.282,0.282-0.282,0.745,0.003,1.03c0.285,0.284,0.747,0.284,1.032,0l8.074-7.985c0.711-0.71,0.711-1.868-0.002-2.579c-0.711-0.712-1.867-0.712-2.58,0l-8.074,7.984c-1.137,1.137-1.137,2.988,0.001,4.127c1.14,1.14,2.989,1.14,4.129,0l6.989-6.896c0.143-0.142,0.375-0.14,0.516,0.003c0.143,0.143,0.141,0.374-0.002,0.516l-6.988,6.895C8.054,17.836,5.743,17.836,4.317,16.411"></path>
 						</svg> Upload file
           </label>
-          <div class="vue-dsu-loader" v-if="loading">
-            <p class="vue-dsu-loader__inner">Loading...</p>
+          <div class="vue-dsu-loader" v-if="dsuLoading">
+            <p class="vue-dsu-loader__inner">dsuLoading...</p>
           </div>
         </template>
       </div>
@@ -39,7 +39,7 @@ import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 
 export default {
-  name: 'vue-dsu',
+  name: 'Uploader',
   props: {
     value: {},
     required: {
@@ -55,11 +55,11 @@ export default {
   },
   data() {
     return {
-      id: null,
+      dsuID: null,
       imageFile: null,
       imageInput: this.value,
-      loading: false,
-      errors: ''
+      dsuLoading: false,
+      dsuErrors: ''
     }
   },
   computed: {
@@ -79,7 +79,7 @@ export default {
     // Image upload
     previewImage(event) {
       const input = event.target
-      this.errors = []
+      this.dsuErrors = []
       if (input.files && input.files[0] && input.files[0].size <= 1000000) {
         // Create a new FileReader to read this image and convert to base64 format
         const reader = new FileReader()
@@ -91,21 +91,21 @@ export default {
         }
         reader.readAsDataURL(input.files[0])
       } else {
-        this.errors = 'File is to big!'
+        this.dsuErrors = 'File is to big!'
       }
     },
     uploadImage() {
       // Upload image if data exists, then update item
       let formData = new FormData()
       formData.append('file', this.imageFile)
-      this.loading = true
+      this.dsuLoading = true
       this.$http.post(this.apiURL, formData).then(response => {
         this.imageInput = response.data.url
         this.$emit('input', response.data.url)
-        this.loading = false
+        this.dsuLoading = false
       }).catch(e => {
-        this.errors = e.response.data
-        this.loading = false
+        this.dsuErrors = e.response.data
+        this.dsuLoading = false
       })
     },
     removeImage() {
@@ -113,7 +113,7 @@ export default {
     }
   },
   mounted() {
-    this.id = this._uid
+    this.dsuID = this._uid
   }
 }
 
