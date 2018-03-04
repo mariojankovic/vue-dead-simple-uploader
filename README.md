@@ -2,6 +2,8 @@
 
 [![NPM version](https://img.shields.io/npm/v/vue-dsu.svg?style=flat)](https://npmjs.com/package/vue-dsu) [![NPM downloads](https://img.shields.io/npm/dm/vue-dsu.svg?style=flat)](https://npmjs.com/package/vue-dsu)
 
+![Vue DSU](https://media.giphy.com/media/3XByK1IZRxe39nAnlk/giphy.gif)
+
 A simple vue upload component with HTML only drag and drop features. It has image preview functionality and uses axios to push your image to whatever endpoint you specify.
 
 ## Install
