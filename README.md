@@ -64,6 +64,10 @@ yarn dev
 yarn build
 ```
 
+## TODO
+- [ ] Add prop to specify icon and label
+- [ ] Add drag/drop animation
+
 ## License
 
 MIT &copy; [mariojankovic](https://github.com/mariojankovic)
