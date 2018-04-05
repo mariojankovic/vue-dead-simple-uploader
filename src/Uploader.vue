@@ -23,7 +23,7 @@
 						</svg> Upload file
           </label>
           <div class="vue-dsu-loader" v-if="dsuLoading">
-            <p class="vue-dsu-loader__inner">dsuLoading...</p>
+            <p class="vue-dsu-loader__inner">Loading...</p>
           </div>
         </template>
       </div>
@@ -91,7 +91,7 @@ export default {
         }
         reader.readAsDataURL(input.files[0])
       } else {
-        this.dsuErrors = 'File is to big!'
+        this.dsuErrors = 'File is too big!'
       }
     },
     uploadImage() {
